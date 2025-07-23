@@ -31,6 +31,7 @@ def sigmoid(z):
 
 Decision Boundaries and Non-linear Decision Boundaries
 >> Linear Regression Cost (Convex): Mean Squared Error to converge to minima
+Binary Cross Entropy = Logistic Loss
 >> Logistic Regression Cost (Non-Convex): Cost = -[actual×log(predicted) + (1-actual)×log(1-predicted)]
 >> When y = 1 (Yes): L(f(x), y) = -log(f(x))
 >> When y = 0 (No): L(f(x), y) = -log(1-f(x))
