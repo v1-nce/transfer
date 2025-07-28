@@ -3,6 +3,7 @@
 # Idea 3: News Summariser
 # Idea 4: RabbitHole
 # Idea 5: A model that generates graph with prompts
+# Idea 6: A platform to allow seamless and effortless event organisation
 
 # Main Idea: News Summariser + Feature to get latest news and summarise in 1 go!!!
 
