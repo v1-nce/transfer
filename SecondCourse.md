@@ -45,4 +45,7 @@ d/dw(J(w))=k, if w increases by 0.001, J(w) = loss is times k.
 
 J(w,b) = 1/2(a-y)^2
 If N nodes and P parameters, compute derivates in roughly N+P steps rather than NxP steps using computational graph.
+======================================================================================
+
+
 

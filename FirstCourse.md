@@ -1,9 +1,41 @@
+Parameters: Weights, Biases, Coefficients
+Cost Function: J(w1, w2, ..., wn, b), MSE is used for most model evals.
+Squared Error Cost: A convex (bowl shape) function ensures a single global minima
+Gradient Descent: Assumes an initial values for w and b and continuously
+                  change the values of w and b to converge. For instance 
+                  we are looking 360 degrees around and find out the steepest 
+                  direction from the next step. Recursively do this to reach the valley.
+                  Gradient Descent is recursively update w and b via the product rule.
+
+a: Learning Rate
+d/(dw or db)(J(w,b)): Derivative of Cost Function J. We do this to find the direction to decrease loss the fastest. This tells us
+                      how sensitive the loss is to bias and weight.
+b = b - a(d/db(J(w,b))): Bias
+w = w - a(d/dw(J(w,b))): Weight
+
+Local Minima: Gradient Descent can lead you to different local minimas.
+
+Activations: Output of a neuron?
+Sigmoid Activation: Takes the raw output of the neuron and squashed it into probabilities
+Neurons: Neurons take in various features from other neurons to learn
+Structure of a neuron: a = g(wx+b) where g is the sigmoid function. The neuron outputs an activation value. It can also be a=g(wa+b). Each neuron has its own weights and biases (clustered together as just weights eg: layer.set_weights([w, b])).
+Hidden Layers: Hidden layers outputs a vector which consists of all the 
+activation values of all neurons inside it.
+
+Multi-Feature Representation: f(x) = w1x1 + w2x2 + w3x3 + b <-(base) this is the equivalent to 
+x(vector).w(vector) + b (dot product) Numpy executes vectorization. It can be written as np.dot(w,x) + b where w and x are numpy array.
+
+Scaling and Normalisation: Ensures scatter plot is not dispersed.
+Scaling: 0<x<5 --> 0<x/5<1
+Mean Normalisation: Rescale them around (0,0) you can get -1<x<1. The formula will look like x = x-mean/(max-min).
+Z-Score Normalisation: x=x-mean/sd
+
 Automatic Convergence Test: Let epsilon, e, be a value. If loss decreases by less than or equals to e in 1 iteration, declare convergence. Meaning you have found a global minimum
 >> If learning rate is too large, loss will increase with iteration
 >> New Weight = Old Weight - Learning Rate * rate of change of loss wrt to Weight
 >> New Bias = Old Bias - Learning Rate * rate of change of loss wrt to Bias
 
-Creating New Features: Use intuition to esign new features for easier learning
+Creating New Features: Use intuition to design new features for easier learning
 
 Polynomial Regression: 
 Polynomial Equation: f(x) = wx + wx^2 + wx^3 + b
